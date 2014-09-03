@@ -1,0 +1,10 @@
+<% include head %>
+<!-- Content -->
+<section id="wrapper">
+  <div style="font-size: 120px;width: 250px;margin:50px auto;text-align: center;">;-(</div>
+  <h1 style="width: 250px;margin:30px auto;text-align: center;">本文禁止转载，正在跳转到<a href="<%= story.share_url %>"> 原文 </a>……</h1>
+</section>
+<script>
+  setTimeout(window.location.href="<%= story.share_url %>", 3000);
+</script>
+<% include foot %>

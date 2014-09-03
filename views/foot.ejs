@@ -1,0 +1,37 @@
+﻿<!-- Footer -->
+<footer id="footer">
+  <div>内容转自 <a href="<%= config.site.source_url %>" target="_blank"><%= config.site.source %></a>
+    | <%= config.site.name %> <a href="<%= config.site.author_url %>" target="_blank">联系作者</a></div>
+  <div id="back">
+    <a href="#wrapper">返回顶端</a>
+  </div>
+</footer>
+<script type="text/javascript" src="<%= config.cdn %>/js/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $("#nav ul a").click(function () {
+      $("#nav ul a").removeClass("active");
+      $(this).addClass("active")
+    });
+    $("#back").click(function () {
+      $('body,html').animate({scrollTop: 0}, 500);
+      return false
+    });
+    var gt300 = false;
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        if(gt300) return;
+        $("#back").animate({right: 0}, 200);
+        $("#header").animate({top: -100}, 200);
+        gt300 = !gt300;
+      } else {
+        if(!gt300) return;
+        $("#back").animate({right: -100}, 200);
+        $("#header").animate({top: 0}, 200);
+        gt300 = !gt300;
+      }
+    });
+  });
+</script>
+</body>
+</html>

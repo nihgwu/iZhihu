@@ -1,0 +1,19 @@
+<% include head %>
+<!-- Content -->
+<section id="wrapper">
+  <div id="container">
+    <% if (news && news.length) { %>
+    <% for (var i = 0, ii = news.length; i < ii; i++) { var item = news[i]; %>
+    <div class="grid">
+      <a href="<%= item.url %>">
+        <img class="image" src="<%= config.cdn + item.image %>-thumbnail" alt="<%= item.title %>"/>
+        <aside class="bottom">
+          <span class="caption"><%= item.title %></span>
+        </aside>
+      </a>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+</section>
+<% include foot %>

@@ -1,0 +1,49 @@
+<% include head %>
+<!-- Content -->
+<section id="wrapper">
+  <div id="container">
+    <% if (news && news.length) { %>
+    <% for (var i = 0, ii = news.length; i < ii; i++) { var item = news[i]; %>
+    <div class="grid">
+      <a href="<%= item.url %>">
+        <img class="image" src="<%= config.cdn + item.image %>-thumbnail" alt="<%= item.date %>"/>
+        <aside class="top"><span class="date"><%= item.date %></span></aside>
+        <aside class="bottom"><span class="count"><%= item.count %> 条内容</span></aside>
+      </a>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+</section>
+<% include foot %>
+<div id="template" style="display: none">
+  <div class="grid">
+    <a>
+      <img class="image"/>
+      <aside class="top"><span class="date"></span></aside>
+      <aside class="bottom"><span class="count"></span></aside>
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    var timestamp = '<%= timestamp %>';
+    $(window).scroll(function () {
+      if (!timestamp)return;
+      var b = $(window).height(), c = $(window).scrollTop(), d = $(document).height();
+      if (b + c >= d) {
+        $.getJSON("<%= url %>/before/" + timestamp, function (json) {
+          timestamp = json.timestamp;
+          $(json.news).each(function (i, item) {
+            $tmpl = $("#template");
+            $('.image', $tmpl).attr("src", "<%= config.cdn %>" + item.image + "-thumbnail").attr("alt", item.date);
+            $('.date', $tmpl).text(item.date);
+            $('.count', $tmpl).text(item.count + ' 条内容');
+            $('a', $tmpl).attr("href", item.url);
+            $("#container").append($tmpl.html())
+          });
+        })
+      }
+    })
+  });
+</script>

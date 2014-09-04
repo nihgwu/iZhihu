@@ -15,7 +15,8 @@ $ cd iZhihu && install
 
 # edit config.js, replace 'cnd' and 'qiniu' sections with your own config
 
-# change the 'endDate' in lib/crawler.js to '20130520' to crawl all data or the day before today for test
+# change the 'endDate' in lib/crawler.js to '20130520' to crawl all data 
+# or the day before today for test
 
 # start server
 $ node app

@@ -21,3 +21,7 @@ $ cd iZhihu && install
 # start server
 $ node app
 ```
+
+## License
+
+This project is released under the terms of the [GNU GPL v3](http://www.gnu.org/licenses/gpl.html)

@@ -11,7 +11,7 @@ How to deploy
 $ git clone https://github.com/nihgwu/iZhihu.git
 
 # install dependencies
-$ cd iZhihu && install
+$ cd iZhihu && npm install
 
 # edit config.js, replace 'cnd' and 'qiniu' sections with your own config
 

@@ -13,7 +13,7 @@ $ git clone https://github.com/nihgwu/iZhihu.git
 # install dependencies
 $ cd iZhihu && npm install
 
-# edit config.js, replace 'cnd' and 'qiniu' sections with your own config
+# edit config.js, replace 'cdn' and 'qiniu' sections with your own config
 
 # change the 'endDate' in lib/crawler.js to '20130520' to crawl all data 
 # or the day before today for test

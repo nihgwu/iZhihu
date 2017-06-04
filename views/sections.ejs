@@ -6,7 +6,7 @@
     <% for (var i = 0, ii = sections.length; i < ii; i++) { var item = sections[i]; %>
     <div class="grid">
       <a href="<%= item.url %>">
-        <img class="image" src="<%= config.cdn + item.image %>-thumbnail" alt="<%= item.name %>"/>
+        <img class="image" src="<%= config.cdn + item.image %>" alt="<%= item.name %>"/>
         <aside class="top"><span><%= item.name %></span></aside>
         <aside class="bottom"><span class="caption"><%= item.description %></span></aside>
       </a>

@@ -6,7 +6,7 @@
     <% for (var i = 0, ii = news.length; i < ii; i++) { var item = news[i]; %>
     <div class="grid">
       <a href="<%= item.url %>">
-        <img class="image" src="<%= config.cdn + item.image %>-thumbnail" alt="<%= item.date %>"/>
+        <img class="image" src="<%= config.cdn + item.image %>" alt="<%= item.date %>"/>
         <aside class="top"><span class="date"><%= item.date %></span></aside>
         <aside class="bottom"><span class="count"><%= item.count %> 条内容</span></aside>
       </a>
@@ -36,7 +36,7 @@
           timestamp = json.timestamp;
           $(json.news).each(function (i, item) {
             $tmpl = $("#template");
-            $('.image', $tmpl).attr("src", "<%= config.cdn %>" + item.image + "-thumbnail").attr("alt", item.date);
+            $('.image', $tmpl).attr("src", "<%= config.cdn %>" + item.image).attr("alt", item.date);
             $('.date', $tmpl).text(item.date);
             $('.count', $tmpl).text(item.count + ' 条内容');
             $('a', $tmpl).attr("href", item.url);

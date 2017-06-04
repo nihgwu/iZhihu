@@ -1,8 +1,8 @@
 module.exports = {
-  port: 1337,
+  port: 3000,
   debug: false,
   site: {
-    "url": "http://youzhihu.com/",
+    "url": "localhost:3000/",
     "author": "nihgwu",
     "author_url": "http://liteneo.com",
     "source": "知乎日报",

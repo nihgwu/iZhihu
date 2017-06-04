@@ -15,6 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use(favicon('favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'data')));
 
 app.locals.config = config;
 app.locals.isActive = function isActive(url, link) {

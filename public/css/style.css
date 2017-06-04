@@ -195,6 +195,7 @@ img {
   box-shadow: 4px 4px 8px rgba(34, 25, 25, 0.4);
   -moz-box-shadow: 4px 4px 8px rgba(34, 25, 25, 0.4);
   -webkit-box-shadow: 4px 4px 8px rgba(34, 25, 25, 0.4);
+  transition: top 1s ease, left 1s ease;
   -webkit-transition: top 1s ease, left 1s ease;
   -moz-transition: top 1s ease, left 1s ease;
   -o-transition: top 1s ease, left 1s ease;
@@ -260,11 +261,10 @@ img {
   position: relative;
   max-width: 600px;
   _width: 600px;
-  margin: 16px auto;
+  margin: 16px auto 4px;
   *margin-top: 80px;
   background-color: #fff;
   overflow: hidden;
-  margin-bottom: -20px;
 }
 
 .content img {
@@ -534,10 +534,6 @@ pre {
     background: #f7f5f5;
     position: relative;
     filter: none;
-  }
-
-  #footer {
-    margin-top: -20px;
   }
 
   .content-wrap {
